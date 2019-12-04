@@ -13,6 +13,7 @@ class PartsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('parts')->delete();
         //
         DB::table('parts')->insert([[
             'type' => 'heads',
@@ -93,14 +94,14 @@ class PartsTableSeeder extends Seeder
             'onSale' => false
         ],[
             'description' => 'A less flexible torso with a battery gauge.',
-            'title' => 'Gauged',
+            'title' => 'Restricted Gauged',
             'src' => '/api/images/torso-gauged.png',
             'type' => 'torsos',
             'cost' => 1385,
             'onSale' => false
         ],[
             'description' => 'A simple torso with a pouch for carrying items.',
-            'title' => 'Gauged',
+            'title' => 'Basic Gauged',
             'src' => '/api/images/torso-pouch.png',
             'type' => 'torsos',
             'cost' => 785,
